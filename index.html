@@ -15,6 +15,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ttq.page();
 }(window, document, 'ttq');
 </script>
+ <script>
+
+   function pushPhoneNum(){
+    const phoneNum = document.getElementById("phone");
+     window.dataLayer = window.dataLayer || [];
+     window.dataLayer.push({
+        'phone': phoneNum
+        });
+      window.alert("Entered phone number is"+phoneNum);
+   }
+ 
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -30,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        required>
 
 <small>Format: 123-456-7890</small>
-<input type="button" value="Submit" />
+<input type="button" value="Submit" onclick="pushPhoneNum()"/>
 
 </body>
 </html>
